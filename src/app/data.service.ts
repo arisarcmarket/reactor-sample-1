@@ -12,7 +12,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 export class DataService {
 
   generateContent(message: string, history: { role: string; content: string }[], config: any): Observable<any> {
-    const api_url = 'https://api-dev-protocol.arc.ai/v1/chat-completions';
+    const api_url = 'https://api.arc.ai/v1/chat-completions';
     const headers = {
       'Content-Type': 'application/json',
       'x-api-key': config.apiKey,

@@ -30,8 +30,10 @@
               "src/assets"
             ],
             "styles": [
+               "node_modules/prismjs/themes/prism.css",
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
+             
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"

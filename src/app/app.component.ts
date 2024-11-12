@@ -3,6 +3,8 @@ import {
   ElementRef,
   TemplateRef,
   ViewChild,
+  OnInit,
+  AfterViewInit,
   inject,
 } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
@@ -42,7 +44,7 @@ import { API_KEY_CONF } from "../config";
     ]),
   ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild("messagesContainer") private messagesContainer!: ElementRef;
   private dataService = inject(DataService);
   public messagesHistory: { role: string; content: string }[] = [];
@@ -60,12 +62,12 @@ export class AppComponent {
   public gQuestions = [
     "What is the latest breaking news?",
     "What is Angular?",
-    "What is new in Gemini Pro 1.5?",
+    "What is Reactor?",
   ];
   public bQuestions = [
     "Can you ıntroduce yourself?",
     "What kind of work do you do?",
-    "What is your mail adres?",
+    "What is your mail address?",
   ];
 
   public characterSelection = [
@@ -75,6 +77,8 @@ export class AppComponent {
     },
 
   ];
+
+  
 
   temperatureOptions = [
     { value: 0.2, label: "Low Creativity" },
@@ -155,4 +159,41 @@ export class AppComponent {
   ngAfterViewInit() {
     this.scrollToBottom();
   }
+
+  private setupCodeCopyListeners(): void {
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const button = target.closest('.copy-code-btn') as HTMLElement;
+
+      
+      if (button) {
+        const code = button.getAttribute('data-code');
+        if (code) {
+          this.copyToClipboard(code, button);
+        }
+      }
+    });
+  }
+
+  private copyToClipboard(text: string, button: HTMLElement): void {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fa fa-check"></i> Copied!';
+      button.classList.add('copied');
+      
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.classList.remove('copied');
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+
+  ngOnInit() {
+    
+    this.setupCodeCopyListeners();
+  }
+
+
 }

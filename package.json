@@ -1,5 +1,5 @@
 {
-  "name": "angular-chatapp-with-gemini-ai",
+  "name": "angular-chatapp-with-reactor-ai",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,8 +19,10 @@
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@google/generative-ai": "^0.2.1",
+    "@types/prismjs": "^1.26.5",
     "bootstrap": "^5.3.3",
     "ngx-loading": "^17.0.0",
+    "prismjs": "^1.29.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

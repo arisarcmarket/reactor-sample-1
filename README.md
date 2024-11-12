@@ -2,7 +2,7 @@
 
 ## Overview
 
-Angular Chat Application with REACTOR is a cutting-edge chat application that integrates the Google Gemini language model to offer a dynamic chatting experience. Hosted on GitHub Pages, this project allows users to engage in conversations with multiple personalities, Designed with Angular, this application delivers a clean, responsive interface that adapts to various devices for a seamless user experience.
+Angular Chat Application with REACTOR is a cutting-edge chat application that integrates the language model to offer a dynamic chatting experience. Hosted on GitHub Pages, this project allows users to engage in conversations with multiple personalities, Designed with Angular, this application delivers a clean, responsive interface that adapts to various devices for a seamless user experience.
  
 
 ## Features
@@ -13,7 +13,7 @@ Angular Chat Application with REACTOR is a cutting-edge chat application that in
 ## Technologies
 
 - **Angular:** The backbone framework providing the structure for this dynamic web application.
-- **REACTOR:** E
+- **REACTOR:**
 
 
 ## Setup
@@ -32,5 +32,5 @@ Angular Chat Application with REACTOR is a cutting-edge chat application that in
 
 ## Contact
 
-For questions, comments, or suggestions, please reach out to us via email
+For questions, comments, or suggestions, please reach out to us via email support@arc.ai
 
